@@ -1,21 +1,21 @@
 import assert from 'assert';
 
-import { buildClassName } from '../../lib/';
+import { stringify } from '../../lib/';
 
 function test(BEMJSON, className) {
     assert.strictEqual(
-        buildClassName(BEMJSON),
+        stringify(BEMJSON),
         className
     );
 }
 
-describe('buildClassName', function() {
+describe('stringify', function() {
     it('is function', function() {
-        assert(typeof buildClassName === 'function');
+        assert(typeof stringify === 'function');
     });
 
     it('empty class if called without argument', function() {
-        assert(buildClassName() === '');
+        assert(stringify() === '');
     });
 
     it('empty class if no block and mix', function() {
