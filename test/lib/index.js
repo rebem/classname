@@ -32,7 +32,7 @@ describe('buildClassName', function() {
         });
 
         it('props.className + block', function() {
-            assert(
+            test(
                 {
                     block: 'block2',
                     className: 'block1'
@@ -44,7 +44,7 @@ describe('buildClassName', function() {
     describe('mods', function() {
         describe('block', function() {
             it('block + mod', function() {
-                assert(
+                test(
                     {
                         block: 'block',
                         mods: {
@@ -55,7 +55,7 @@ describe('buildClassName', function() {
             });
 
             it('block + few mods', function() {
-                assert(
+                test(
                     {
                         block: 'block',
                         mods: {
@@ -67,7 +67,7 @@ describe('buildClassName', function() {
             });
 
             it('block + shorthand mod = true', function() {
-                assert(
+                test(
                     {
                         block: 'block',
                         mods: {
@@ -78,7 +78,7 @@ describe('buildClassName', function() {
             });
 
             it('block + shorthand mod = false', function() {
-                assert(
+                test(
                     {
                         block: 'block',
                         mods: {
@@ -91,7 +91,7 @@ describe('buildClassName', function() {
 
         describe('elem', function() {
             it('block + elem + mod', function() {
-                assert(
+                test(
                     {
                         block: 'block',
                         elem: 'elem',
@@ -103,7 +103,7 @@ describe('buildClassName', function() {
             });
 
             it('block + elem + few mods', function() {
-                assert(
+                test(
                     {
                         block: 'block',
                         elem: 'elem',
@@ -116,7 +116,7 @@ describe('buildClassName', function() {
             });
 
             it('block + shorthand mod = true', function() {
-                assert(
+                test(
                     {
                         block: 'block',
                         elem: 'elem',
@@ -128,7 +128,7 @@ describe('buildClassName', function() {
             });
 
             it('block + shorthand mod = false', function() {
-                assert(
+                test(
                     {
                         block: 'block',
                         elem: 'elem',
@@ -143,7 +143,7 @@ describe('buildClassName', function() {
 
     describe('mix', function() {
         it('mix without block', function() {
-            assert(
+            test(
                 {
                     mix: {
                         block: 'block'
@@ -153,7 +153,7 @@ describe('buildClassName', function() {
         });
 
         it('block + mix', function() {
-            assert(
+            test(
                 {
                     block: 'block1',
                     mix: {
@@ -164,7 +164,7 @@ describe('buildClassName', function() {
         });
 
         it('block + mods + mix', function() {
-            assert(
+            test(
                 {
                     block: 'block1',
                     mods: {
@@ -178,7 +178,7 @@ describe('buildClassName', function() {
         });
 
         it('block + elem + mix', function() {
-            assert(
+            test(
                 {
                     block: 'block1',
                     elem: 'elem',
@@ -190,7 +190,7 @@ describe('buildClassName', function() {
         });
 
         it('block + elem + mods + mix', function() {
-            assert(
+            test(
                 {
                     block: 'block1',
                     elem: 'elem',
@@ -204,8 +204,8 @@ describe('buildClassName', function() {
             );
         });
 
-        it('block + elem + mods + mix + className', function() {
-            assert(
+        it.skip('block + elem + mods + mix + className', function() {
+            test(
                 {
                     block: 'block1',
                     elem: 'elem',
@@ -221,7 +221,7 @@ describe('buildClassName', function() {
         });
 
         it('complex mix', function() {
-            assert(
+            test(
                 {
                     block: 'block1',
                     mix: {
@@ -237,7 +237,7 @@ describe('buildClassName', function() {
         });
 
         it('multiple mixes', function() {
-            assert(
+            test(
                 {
                     block: 'block1',
                     mix: [
@@ -253,7 +253,7 @@ describe('buildClassName', function() {
         });
 
         it('multiple mixes with holes', function() {
-            assert(
+            test(
                 {
                     block: 'block1',
                     mix: [
@@ -268,7 +268,7 @@ describe('buildClassName', function() {
         });
 
         it('recursive mixes', function() {
-            assert(
+            test(
                 {
                     block: 'block1',
                     mix: {
