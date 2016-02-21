@@ -36,7 +36,7 @@ describe('buildClassName', function() {
                 {
                     block: 'block2',
                     className: 'block1'
-                }, 'block1 block2'
+                }, 'block2 block1'
             );
         });
     });
@@ -204,7 +204,7 @@ describe('buildClassName', function() {
             );
         });
 
-        it.skip('block + elem + mods + mix + className', function() {
+        it('block + elem + mods + mix + className', function() {
             test(
                 {
                     block: 'block1',
@@ -216,7 +216,7 @@ describe('buildClassName', function() {
                         block: 'block2'
                     },
                     className: 'hello'
-                }, 'hello block1__elem block1__elem_mod_val block2'
+                }, 'block1__elem block1__elem_mod_val block2 hello'
             );
         });
 
