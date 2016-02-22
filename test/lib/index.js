@@ -2,9 +2,9 @@ import assert from 'assert';
 
 import { stringify } from '../../lib/';
 
-function test(BEMJSON, className) {
+function test(props, className) {
     assert.strictEqual(
-        stringify(BEMJSON),
+        stringify(props),
         className
     );
 }

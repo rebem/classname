@@ -2,15 +2,15 @@ import assert from 'assert';
 
 import validate from '../../lib/validate';
 
-function test(bemjson, message) {
+function test(props, message) {
     const origConsoleWarn = console.warn;
 
     console.warn = function(warning, obj) {
         assert.strictEqual(warning, message);
-        assert.deepEqual(obj, bemjson);
+        assert.deepEqual(obj, props);
     };
 
-    validate(bemjson);
+    validate(props);
 
     console.warn = origConsoleWarn;
 }
