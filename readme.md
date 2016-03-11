@@ -2,6 +2,7 @@
 [![travis](http://img.shields.io/travis/rebem/classname.svg?style=flat-square)](https://travis-ci.org/rebem/classname)
 [![coverage](https://img.shields.io/codecov/c/github/rebem/classname.svg?style=flat-square)](https://codecov.io/github/rebem/classname)
 [![deps](https://img.shields.io/gemnasium/rebem/classname.svg?style=flat-square)](https://gemnasium.com/rebem/classname)
+[![gitter](https://img.shields.io/badge/gitter-join_chat_%E2%86%92-46bc99.svg?style=flat-square)](https://gitter.im/rebem/rebem)
 
 Set of helpers for composing and parsing [BEM](http://getbem.com/) classNames.
 
