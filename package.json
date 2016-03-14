@@ -1,6 +1,6 @@
 {
   "name": "rebem-classname",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Helpers for composing and parsing BEM classNames",
   "keywords": [ "bem", "helper", "classname", "bemjson", "react" ],
   "homepage": "https://github.com/rebem/classname",
