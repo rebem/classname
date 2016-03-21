@@ -1,4 +1,5 @@
 import assert from 'assert';
+import requireUncached from 'require-uncached';
 
 import { stringify } from '../../lib/';
 
@@ -278,6 +279,38 @@ describe('stringify', function() {
                         }
                     }
                 }, 'block1 block2 block3'
+            );
+        });
+    });
+
+    describe('custom delimeters', function() {
+        it('mods', function() {
+            process.env.REBEM_MOD_DELIM = '~~';
+
+            const customStringify = requireUncached('../../lib/').stringify;
+
+            assert.strictEqual(
+                customStringify({
+                    block: 'block',
+                    mods: {
+                        mod: 'val'
+                    }
+                }),
+                'block block~~mod~~val'
+            );
+        });
+
+        it('elem', function() {
+            process.env.REBEM_ELEM_DELIM = '--';
+
+            const customStringify = requireUncached('../../lib/').stringify;
+
+            assert.strictEqual(
+                customStringify({
+                    block: 'block',
+                    elem: 'elem'
+                }),
+                'block--elem'
             );
         });
     });
