@@ -132,9 +132,9 @@ stringify({
 
 *TODO*
 
-## Notes
+## Environment variables
 
-### Environment
+### `NODE_ENV`
 
 `process.env.NODE_ENV` must be available. For example in webpack you can do this with `DefinePlugin`:
 
@@ -143,6 +143,22 @@ plugins: [
     new webpack.DefinePlugin({
         'process.env': {
             NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+        }
+    })
+]
+```
+
+### Custom delimeters
+
+Default delimeters are `_` for modifiers and `__` for elements, but you can change it with special environment variables:
+
+
+```js
+plugins: [
+    new webpack.DefinePlugin({
+        'process.env': {
+            REBEM_MOD_DELIM: JSON.stringify('--'),
+            REBEM_ELEM_DELIM: JSON.stringify('~~')
         }
     })
 ]
