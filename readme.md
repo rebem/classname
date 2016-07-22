@@ -128,30 +128,24 @@ stringify({
 // "boop beep"
 ```
 
+### `validate`
+
+Checks if BEMJSON is valid and throws warnings into console if it's not. Returns the same BEMJSON back.
+
+```js
+validate({
+    elem: 'boop'
+});
+// "you should provide block along with elem Object{elem: 'boop'}"
+```
+
 ### `parse`
 
 *TODO*
 
-## Environment variables
+## Custom delimeters
 
-### `NODE_ENV`
-
-`process.env.NODE_ENV` must be available. For example in webpack you can do this with `DefinePlugin`:
-
-```js
-plugins: [
-    new webpack.DefinePlugin({
-        'process.env': {
-            NODE_ENV: JSON.stringify(process.env.NODE_ENV)
-        }
-    })
-]
-```
-
-### Custom delimeters
-
-Default delimeters are `_` for modifiers and `__` for elements, but you can change it with special environment variables:
-
+Default delimeters are `_` for modifiers and `__` for elements, but you can change them with special environment variables:
 
 ```js
 plugins: [
